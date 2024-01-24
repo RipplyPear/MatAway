@@ -1,19 +1,14 @@
 {
-   "manifest_version": 2,
-   "name": "MatAway",
-   "version": "1.0",
- 
-   "description": "Adds a red border to all webpages matching mozilla.org.",
- 
-   "icons": {
-     "48": "icons/border-48.png"
-   },
- 
-   "content_scripts": [
-     {
-       "matches": ["*://*.mozilla.org/*"],
-       "js": ["source/mataway.js"]
-     }
-   ]
- }
+  "manifest_version": 2,
+  "name": "MatAway",
+  "version": "1.5",
+
+  "description": "Hides promoted items.",
+
+  "permissions": ["activeTab", "contextMenus", "webRequest", "<all_urls>"],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
  
